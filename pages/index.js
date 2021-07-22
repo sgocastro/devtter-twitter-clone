@@ -1,36 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useEffect } from 'react'
 import Link from 'next/link'
 
-export default function Home() {
+const Index = ({setTitlePage, setMetaDescription}) => {
+
+  useEffect(() => {
+    setMetaDescription("Devtter es una red social para developers")
+    setTitlePage("La red social para developers")
+  }, [])
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Devtter</title>
-        <meta name="description" content="Replica de twitter pero orientado a developers." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <Link href="/timeline">Timeline</Link>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+    <>
+      <h1>Home</h1>    
+      <Link href="/timeline">Ir al timeline</Link>
+    </>
   )
 }
+
+export default Index;
