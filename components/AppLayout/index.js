@@ -1,23 +1,24 @@
-import Link from "next/link";
-import AppLayoutStyles from "../../styles/AppLayoutStyles";
-import GlobalStyles from "../../styles/GlobalStyles";
+import Link from "next/link"
+import AppLayoutStyles from "../../styles/AppLayoutStyles"
+import GlobalStyles from "../../styles/GlobalStyles"
+import Logo from "../Logo";
 
 const AppLayout = ({ children, SEOComponente }) => {
   return (
     <>
       <SEOComponente />
       <div>
-        <header className="AppLayout_header">
-          <Link href="/">
-            <h2>Devtter</h2>
-          </Link>
-        </header>
         <main>
-          <div>{children}</div>
+          <section className="AppLayout_header">
+            <Link href="/">
+              <Logo width="90px" height="90px"/>
+            </Link>
+          </section>
+          <div>
+            {children}
+          </div>
+          <section className="AppLayout_footer">Footer</section>
         </main>
-        <footer className="AppLayout_footer">
-          <h2>Powered by @sgocastro</h2>
-        </footer>
       </div>
       <style jsx global>
         {GlobalStyles}

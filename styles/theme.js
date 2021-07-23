@@ -11,3 +11,6 @@ export const colors = {
     white: '#F0F0F0'
 }
 
+export const breakpoints = {
+    mobile: '550px'   
+}

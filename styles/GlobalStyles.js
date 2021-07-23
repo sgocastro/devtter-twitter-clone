@@ -14,9 +14,7 @@ export default css.global`
             radial-gradient(${backgroundColor} 1px, transparent 1px);
         background-position: 0 0, 25px 25px;
         background-size: 50px 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: none;
     }
     
     * {
